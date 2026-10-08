@@ -20,15 +20,17 @@ def completeTodo():
 def removeTodo():
     pass
 
-def listTodos(): # FIX
+def listTodos(): 
     f = open("todos.txt", "r")
-    f.read()
+    f = f.read()
     print(f)
 
 def main():
     action = input(askwhat)
     if action == "1":
        addTodo()
+       listTodos()
+    if action == "3":
        listTodos()
 
 
