@@ -19,7 +19,7 @@ def addTodo():
 def completeTodo():
     target = input("What do you want to Complete?")
     f = open("todos.txt", "r")
-    lines = f.read()
+    lines = f.readlines()
     kept = []
     for line in lines:
         if line.strip() != target.strip():
@@ -27,10 +27,10 @@ def completeTodo():
     f = open("todos.txt", "w")
     f.writelines(kept)
 
-def removeTodo():
+def removeTodo(): 
     target = input("What do you want to remove?")
     f = open("todos.txt", "r")
-    lines = f.read()
+    lines = f.readlines()
     kept = []
     for line in lines:
         if line.strip() != target.strip():
